@@ -1,0 +1,5 @@
+.block_style { border: 1px solid #c3c4c7; background: white; padding: 10px 5px; }
+.code { background: rgba(255, 255, 255, 0.6); padding: 10px; white-space: break-spaces; }
+.dashicons-controls-forward { color: lightgrey; }
+.dashicons-yes-alt { color: green; }
+.dashicons-dismiss { color: red; }		
