@@ -48,8 +48,8 @@ function version($str): array
 	return ['major'=>(int) $ex[0], 'minor'=>(int) $ex[1], 'sub'=>$sub, 'str'=>$ex[0].'.'.$ex[1].'.'.$sub];
 }
 
-$response		= wp_remote_get('https://api.wordpress.org/core/version-check/1.7/');
-if ($response && isset($response['body']))
+$response	 = wp_remote_get('https://api.wordpress.org/core/version-check/1.7/');
+if (!is_wp_error($response) && isset($response['body']))
 {
 	$latest			= version(json_decode($response['body'])->offers[0]->version);
 	$current		= version(get_bloginfo('version'));

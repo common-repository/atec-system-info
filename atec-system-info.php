@@ -4,9 +4,9 @@ if (!defined( 'ABSPATH' )) { exit; }
   * Plugin Name:  atec System Info
   * Plugin URI: https://atecplugins.com/
   * Description: Highly detailed system information (system health status, server info (OS, memory & DB) and comprehensive server and PHP configuration details.
-  * Version: 1.1.7
+  * Version: 1.1.8
   * Requires at least: 5.2
-  * Tested up to: 6.6.3
+  * Tested up to: 6.7
   * Requires PHP: 7.4
   * Author: Chris Ahrweiler
   * Author URI: https://atec-systems.com
@@ -17,7 +17,7 @@ if (!defined( 'ABSPATH' )) { exit; }
   
 if (is_admin()) 
 { 
-	wp_cache_set('atec_wpsi_version','1.1.7');
+	wp_cache_set('atec_wpsi_version','1.1.8');
 	register_activation_hook( __FILE__, function() { require_once('includes/atec-wpsi-activation.php'); });
     require_once('includes/atec-wpsi-install.php');
 }
